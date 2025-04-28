@@ -57,7 +57,7 @@ npm install
 Start Backend Server:
 ```bash
 cd server
-npm run dev # or npm start
+node app.js # or npm start
 ```
 
 Start Frontend React App:
