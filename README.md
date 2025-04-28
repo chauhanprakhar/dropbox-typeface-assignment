@@ -34,8 +34,8 @@ dropbox-assignment/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/dropbox-assignment.git
-cd dropbox-assignment
+git clone https://github.com/chauhanprakhar/dropbox-typeface-assignment.git
+cd dropbox-typeface-assignment
 ```
 
 ### 2. Install Dependencies
