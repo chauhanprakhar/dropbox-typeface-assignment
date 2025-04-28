@@ -49,12 +49,15 @@ function App() {
   const [recentFiles, setRecentFiles] = useState([]);
   const [quickFilter, setQuickFilter] = useState('home');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     async function fetchFiles() {
+      setLoading(true); 
       const res = await listFiles();
       if (res.success) setFiles(res.data);
       else if (res.message) setError(res.message);
+      setLoading(false);
     }
     fetchFiles();
     // Load recent files from localStorage
@@ -148,7 +151,13 @@ function App() {
         />
         <SearchBar value={search} onChange={e => setSearch(e.target.value)} />
         <RecentFiles recentFiles={recentFiles} onClear={handleClearRecent} />
-        <FileGrid
+        {
+          loading ? (
+            <div className="loader-container">
+              <div className="loader"></div>
+              <div>Loading files...</div>
+            </div>
+          ) :  <FileGrid
           files={filteredFiles}
           onDelete={currentView !== 'trash' ? handleDeleteFile : undefined}
           isTrash={currentView === 'trash'}
@@ -157,6 +166,7 @@ function App() {
           quickFilter={quickFilter}
           onQuickFilterChange={setQuickFilter}
         />
+        }
       </div>
       <UploadModal open={uploadOpen} onClose={() => setUploadOpen(false)} onUpload={handleUpload} />
       <FilePreviewModal open={!!previewFile} file={previewFile} onClose={handleClosePreview} onDownload={handleDownloadPreview} />
