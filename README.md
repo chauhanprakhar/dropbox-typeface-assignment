@@ -57,28 +57,111 @@ The build will be in `client/build/`.
 - **Responsive**: Works on desktop and mobile (sidebar hides on small screens).
 
 ---
+# Dropbox Assignment
 
-## Project Structure
+A full-stack Dropbox clone assignment using **React** for the frontend and **Node.js/Express** for the backend.
 
+## 📁 Project Structure
+
+```
 dropbox-assignment/
-client/ # React frontend
-public/
-src/
-build/
-package.json
-server/ # Node.js/Express backend
-controllers/
-middlewares/
-models/
-routes/
-services/
-utils/
-app.js
-package.json
-docker-compose.yml
-README.md
+├── client/                # React frontend
+│   ├── public/
+│   ├── src/
+│   ├── build/            # Production build (after running npm run build)
+│   └── package.json      # Frontend dependencies and scripts
+├── server/               # Node.js/Express backend
+│   ├── controllers/      # Request handlers
+│   ├── middlewares/      # Express middlewares (auth, error handling, etc.)
+│   ├── models/           # Database models (if using DB)
+│   ├── routes/           # API route definitions
+│   ├── services/         # External services or business logic
+│   ├── utils/            # Utility/helper functions
+│   ├── app.js            # Main Express app
+│   └── package.json      # Backend dependencies and scripts
+├── docker-compose.yml    # Docker Compose file (optional, if containerized)
+└── README.md             # Project documentation (this file)
+```
 
----
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/dropbox-assignment.git
+cd dropbox-assignment
+```
+
+### 2. Install Dependencies
+
+For Frontend:
+```bash
+cd client
+npm install
+```
+
+For Backend:
+```bash
+cd ../server
+npm install
+```
+
+### 3. Running the App Locally
+
+Start Backend Server:
+```bash
+cd server
+npm run dev # or npm start
+```
+
+Start Frontend React App:
+Open a new terminal:
+```bash
+cd client
+npm start
+```
+
+* Frontend runs on: `http://localhost:3000`
+* Backend runs on: `http://localhost:5000` (or whatever port you set)
+
+## ⚙️ Environment Variables
+
+Set up environment variables if needed for backend (`server/.env`):
+```
+PORT=5000
+DB_URI=your_database_uri
+JWT_SECRET=your_jwt_secret
+```
+(Adjust based on your actual backend configuration.)
+
+## 🐳 Running with Docker
+
+If you are using Docker:
+```bash
+docker-compose up --build
+```
+This will spin up both the client and server in containers.
+
+## 📌 Features
+
+* User authentication (login/signup)
+* File upload and download
+* Preview files (PDFs, images)
+* Recently opened files tracking
+* Filtering files by type (Documents, Photos, GIFs, MP3s)
+* Trash/Delete functionality
+* Responsive frontend with React
+
+## ✨ Tech Stack
+
+* **Frontend:** React.js, CSS
+* **Backend:** Node.js, Express
+* **Storage:** (Local/File System or Database - based on your setup)
+* **Containerization (Optional):** Docker
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ## Notes
 
