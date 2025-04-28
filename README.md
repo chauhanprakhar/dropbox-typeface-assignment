@@ -103,6 +103,7 @@ This will spin up both the client and server in containers.
 * **Frontend:** React.js, CSS
 * **Backend:** Node.js, Express
 * **Storage:** (Amazon S3)
+* **Database:** MongoDB
 
 ## 📄 License
 
