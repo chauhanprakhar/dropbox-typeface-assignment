@@ -64,7 +64,7 @@ npm start
 
 * Frontend runs on: `http://localhost:3000`
 * Backend runs on: `http://localhost:5000` (or whatever port you set)
-* Remember to replace base URL in api.ts from `https://dropbox-typeface-assignment.onrender.com/api` to `http://localhost:5000`or whatever port you set)
+* Remember to replace base URL in api.ts inside `client\src` from `https://dropbox-typeface-assignment.onrender.com/api` to `http://localhost:5000`or whatever port you set)
 
 ## ⚙️ Environment Variables
 
