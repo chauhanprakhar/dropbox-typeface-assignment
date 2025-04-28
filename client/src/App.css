@@ -1,0 +1,91 @@
+.app-root {
+  display: flex;
+  height: 100vh;
+  background: #f8fafc;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 2rem;
+  overflow-y: auto;
+  color: #23262f;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar {
+  background: #f4f6fb;
+  color: #374151;
+  border-right: 1px solid #e5e7eb;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar li.active, .sidebar li:hover {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.topbar {
+  background: #fff;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s, color 0.3s;
+}
+
+.topbar-upload {
+  background: #2563eb;
+  color: #fff;
+}
+
+.filegrid {
+  background: transparent;
+}
+
+.filegrid-item {
+  background: #f4f6fb;
+  color: #374151;
+}
+.filegrid-item:hover {
+  background: #e0e7ff;
+}
+
+.filegrid-filter {
+  background: #f4f6fb;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+.filegrid-filter.active, .filegrid-filter:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.upload-modal, .preview-modal, .error-modal {
+  background: #fff;
+  color: #23262f;
+}
+
+.upload-drop-area {
+  background: #f4f6fb;
+  border-color: #2563eb;
+  color: #374151;
+}
+
+.upload-drop-area:hover {
+  background: #e0e7ff;
+}
+
+.recent-files {
+  background: transparent;
+  color: #374151;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none !important;
+  }
+  .main-content {
+    padding: 0 0.5rem;
+  }
+}

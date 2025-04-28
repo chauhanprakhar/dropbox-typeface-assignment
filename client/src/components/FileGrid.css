@@ -1,0 +1,88 @@
+.filegrid {
+  margin-top: 1.5rem;
+}
+.filegrid-filters {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.filegrid-filter {
+  background: #f4f6fb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.98rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+}
+.filegrid-filter:hover {
+  background: #e0e7ff;
+  border: 1px solid #2563eb;
+}
+.filegrid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1.2rem;
+}
+.filegrid-item {
+  background: #f4f6fb;
+  border-radius: 10px;
+  padding: 1.1rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 0;
+  position: relative;
+}
+.filegrid-item:hover {
+  background: #e0e7ff;
+}
+.filegrid-icon {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+.filegrid-label {
+  font-size: 1rem;
+  color: #374151;
+  text-align: center;
+  word-break: break-all;
+}
+.filegrid-action-btns {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 0.3rem;
+}
+.filegrid-download-btn,
+.filegrid-delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s, background 0.2s;
+  z-index: 2;
+  padding: 2px 6px;
+}
+.filegrid-item:hover .filegrid-download-btn,
+.filegrid-item:hover .filegrid-delete-btn {
+  opacity: 1;
+}
+.filegrid-download-btn:hover {
+  color: #2563eb;
+  background: #e0e7ff;
+  border-radius: 50%;
+}
+.filegrid-delete-btn {
+  color: #ef4444;
+}
+.filegrid-delete-btn:hover {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-radius: 50%;
+} 
