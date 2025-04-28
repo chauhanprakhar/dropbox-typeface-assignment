@@ -1,4 +1,8 @@
+## Production Setup
+ #### You can access project at https://dropbox-typeface-assignment-client.onrender.com/
+ #### For Hosting https://render.com/ is used
 
+## Local Setup
 ### 4. Install Dependencies
 
 #### Backend
