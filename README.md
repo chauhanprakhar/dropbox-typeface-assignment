@@ -3,7 +3,8 @@
 A full-stack Dropbox clone assignment using **React** for the frontend and **Node.js/Express** for the backend. This is a single user application as most of the fuynctionality revolves around file handling.
 
 ## Project Architecture
-<img width="787" alt="image" src="https://github.com/user-attachments/assets/aea0b6b2-4edd-456a-b89e-715622185125" />
+<img width="795" alt="image" src="https://github.com/user-attachments/assets/639b5e0f-b5f6-4fed-8807-8e72188cee23" />
+
 
 
 ## 📁 Project Structure
