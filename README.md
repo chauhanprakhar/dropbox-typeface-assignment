@@ -1,65 +1,6 @@
-## Production Setup
- #### You can access project at https://dropbox-typeface-assignment-client.onrender.com/
- #### For Hosting https://render.com/ is used
-
-## Local Setup
-### 4. Install Dependencies
-
-#### Backend
-
-```sh
-cd server
-npm install
-```
-
-#### Frontend
-
-```sh
-cd ../client
-npm install
-```
-
-### 5. Build and Run
-
-#### Backend
-
-```sh
-cd ../server
-npm start
-```
-
-#### Frontend (Development)
-
-```sh
-cd ../client
-npm start
-```
-
-#### Frontend (Production Build)
-
-```sh
-cd ../client
-npm run build
-```
-The build will be in `client/build/`.
-
----
-
-## Usage
-
-- **Upload files**: Click "Upload file" or drag-and-drop.
-- **Preview**: Click a file to preview (images, PDFs, GIFs, MP3s).
-- **Search**: You can search for a specific file.
-- **Download/Delete**: Hover a file for download/delete buttons.
-- **Sidebar**: Filter by file type.
-- **Quick Filter**: Use in Home view for fast filtering.
-- **Recently Opened**: Shows your last 8 opened files (localStorage).
-- **Responsive**: Works on desktop and mobile (sidebar hides on small screens).
-
----
 # Dropbox Assignment
 
-A full-stack Dropbox clone assignment using **React** for the frontend and **Node.js/Express** for the backend.
+A full-stack Dropbox clone assignment using **React** for the frontend and **Node.js/Express** for the backend. This is a single user application as most of the fuynctionality revolves around file handling.
 
 ## 📁 Project Structure
 
@@ -123,41 +64,40 @@ npm start
 
 * Frontend runs on: `http://localhost:3000`
 * Backend runs on: `http://localhost:5000` (or whatever port you set)
+* Remember to replace base URL in api.ts from `https://dropbox-typeface-assignment.onrender.com/api` to `http://localhost:5000`or whatever port you set)
 
 ## ⚙️ Environment Variables
 
 Set up environment variables if needed for backend (`server/.env`):
 ```
-PORT=5000
-DB_URI=your_database_uri
-JWT_SECRET=your_jwt_secret
+PORT=5001 
+MONGO_URI= mongourl
+AWS_ACCESS_KEY_ID= access key id
+AWS_SECRET_ACCESS_KEY= secret key
+AWS_REGION= region
+AWS_S3_BUCKET_NAME= bucketname
 ```
 (Adjust based on your actual backend configuration.)
 
-## 🐳 Running with Docker
-
-If you are using Docker:
-```bash
-docker-compose up --build
-```
 This will spin up both the client and server in containers.
 
 ## 📌 Features
 
-* User authentication (login/signup)
-* File upload and download
-* Preview files (PDFs, images)
-* Recently opened files tracking
-* Filtering files by type (Documents, Photos, GIFs, MP3s)
-* Trash/Delete functionality
-* Responsive frontend with React
+
+- **Upload files**: Click "Upload file" or drag-and-drop.
+- **Preview**: Click a file to preview (images, PDFs, GIFs, MP3s).
+- **Search**: You can search for a specific file.
+- **Download/Delete**: Hover a file for download/delete buttons.
+- **Sidebar**: Filter by file type.
+- **Quick Filter**: Use in Home view for fast filtering.
+- **Recently Opened**: Shows your last 8 opened files (localStorage).
+- **Responsive**: Works on desktop and mobile (sidebar hides on small screens).
 
 ## ✨ Tech Stack
 
 * **Frontend:** React.js, CSS
 * **Backend:** Node.js, Express
-* **Storage:** (Local/File System or Database - based on your setup)
-* **Containerization (Optional):** Docker
+* **Storage:** (Amazon S3)
 
 ## 📄 License
 
@@ -167,7 +107,6 @@ This project is licensed under the MIT License.
 
 - **File size limit:** 5MB per file (configurable in backend).
 - **Supported file types:** Images (jpg, png, gif), PDFs, MP3, MP4, etc.
-- **Authentication:** Simple username/password match (can be extended).
 - **Error Handling:** All API errors are shown in a modal with a clear message.
 - **Production:** Use `npm run build` in `client/` and serve with Express or a static server.
 
