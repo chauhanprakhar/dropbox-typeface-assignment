@@ -49,6 +49,7 @@ The build will be in `client/build/`.
 
 - **Upload files**: Click "Upload file" or drag-and-drop.
 - **Preview**: Click a file to preview (images, PDFs, GIFs, MP3s).
+- **Search**: You can search for a specific file.
 - **Download/Delete**: Hover a file for download/delete buttons.
 - **Sidebar**: Filter by file type.
 - **Quick Filter**: Use in Home view for fast filtering.
