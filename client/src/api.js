@@ -1,4 +1,4 @@
-const API_BASE = 'https://dropbox-typeface-assignment-f87fc96b6fa4.herokuapp.com/api';
+const API_BASE = 'https://dropbox-typeface-assignment.onrender.com';
 
 export async function registerUser(username, password) {
   const res = await fetch(`${API_BASE}/users/register`, {
